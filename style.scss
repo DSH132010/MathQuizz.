@@ -1,0 +1,279 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --White: rgb(255, 255, 255);
+    --Black: rgba(0, 0, 0, 0.548);
+}
+
+body{
+    overflow: hidden;
+}
+
+
+
+.bg{
+    height: 100vh;
+    width: 100vw;
+    background:url(p.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-blend-mode: overlay;
+}
+.Main{
+    height: 100vh;
+    padding: 30px;
+    width: 100vw;
+    text-align: center;
+
+    h1{
+        color: var(--White);
+        border-radius: 100%;
+        height: 5rem;
+        width: 5rem;
+        border: 2px solid var(--White);
+        padding: 15px 20px;
+        margin: 100px auto 0px;
+    }
+}
+
+.input{
+    border-radius: 25px;
+    padding: 5px 20px;
+    background: rgba(255, 255, 255, 0.226);
+    height:3rem;
+    width: 20rem;
+    margin: 45px auto 40px;
+    display: flex;
+
+    input{
+        background: transparent;
+        outline: none;
+        height: 100%;
+        border: none;
+        color: rgb(255, 255, 255);
+        float: right;
+        width: 100%;
+
+        &::placeholder{
+            color: rgb(255, 255, 255);
+        }
+
+        &::selection{
+            background:rgba(255, 255, 255, 0.226);
+            color: rgb(255,0,91);
+        }
+    }
+
+    i{
+        color: #fff;
+        margin: 11px;
+    }
+}
+.button{
+    margin: 0 auto;
+    width: 100%;
+}
+.Btn{
+    background: rgb(255,0,91);
+    outline:none;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    margin: 10px auto 0px;
+    border-radius: 20px;
+    width: 20rem;
+
+    &:hover{
+        background: rgb(224, 0, 82);
+    }
+}
+
+
+.two{
+    background: url(sunset-over-mountains-night-dark-blue-and-pink-sky-and-silhouette-of-mountain-anastasiia-shliago.jpg);
+    background-size: cover;
+    padding: 0px auto;
+}
+
+
+.back{
+     color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 0;
+    padding-left: 30px;
+    padding-right: 0px;
+    height: max-content;
+    width: max-content;
+  
+    p{
+        display: inline;
+        margin-left: 5px;
+        transition: padding-left 0.5s ease-in-out;
+        font-family: 'Poppins';
+        font-weight: 500;
+
+
+        &:hover{
+            padding-left: 10px;
+        }
+    }
+
+    i{
+        margin-right: 20px;
+        display: inline;
+        transition: padding-left 0.5s ease-in-out;
+
+        &:hover{
+           padding-left: 20px;
+        }
+    }
+}
+
+h5{
+    color: rgb(246, 246, 246);
+}
+h3{
+    color: #fff;
+}
+
+.input-two{
+    border-radius: 25px;
+    padding:20px;
+    background: rgba(255, 255, 255, 0.226);
+    height:max-content;
+    width: 20rem;
+    margin: 0px auto 0px;
+}
+
+.Main-two{
+    padding: 0px 0px;
+
+
+    .input{
+        background: rgba(255, 255, 255, 0.29);
+        margin: 0px auto 10px;
+    }
+}
+   
+
+.input-three{
+        border-radius: 25px;
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.226);
+        height: max-content;
+        width: 15rem;
+        margin: 0px;
+        margin-right: 30px;
+        color: #fff;
+        float: right;
+
+
+    h4{
+        display: inline;
+    }
+
+    span{
+        font-size: 1.3rem;
+    }
+}
+
+.input-four{
+    border-radius: 25px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.226);
+    height:10.9rem;
+    width:20rem;
+    margin: 30px auto 30px;
+    color: #fff;
+}
+
+
+
+
+.stagger{
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    pointer-events: none;
+
+
+    li{
+        width: 20%;
+        height: 100%;
+        list-style: none;
+        // animation: stagger 9s ease-in-out 0.6s forwards;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1.0s ease-in-out;
+        transform-origin: bottom;
+        
+        // animation-direction:normal;
+        // anim
+
+
+        &:nth-of-type(1){
+            background-color: #fcefee;
+            // height:10%;
+            transform: scaleY(10%);
+        }
+
+        &:nth-of-type(2){
+            background-color: #fccde2;
+            // height: 20%;
+            pointer-events: none;
+            transform: scaleY(20%);
+        }
+        &:nth-of-type(3){
+            background-color: #fc5c9c;
+            // height: 30%;
+            pointer-events: none;
+            transform: scaleY(30%);
+        }
+        &:nth-of-type(4){
+            background-color:#9c1de7;
+            // height: 40%;
+            transform: scaleY(40%);
+            pointer-events: none;
+        }
+        &:nth-of-type(5){
+            background-color: #c5e3f6;
+            // height: 50%;
+            transform: scaleY(50%);
+            pointer-events: none;
+        }
+
+        
+    }
+}
+
+
+@keyframes stagger {
+
+    0%{
+        opacity: 0;
+
+    }
+
+    50%{
+        transform: scaleY(100%);
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: scaleY(0%);
+        opacity: 0;
+    }
+
+}
+
+
+
